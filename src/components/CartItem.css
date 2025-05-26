@@ -1,0 +1,118 @@
+/* .item-section {
+  display: flex;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  gap: 1rem; 
+}
+
+.item-img-div {
+  width: 50%;
+  height: 180px;
+}
+
+.item-img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.item-section-desc {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-price-delete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #4a4a4a;
+} */
+
+
+/* --- CartItem.css --- */
+
+.item-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  gap: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  height: 220px;
+}
+
+.item-img-div {
+  width: 50%;
+  height: 100%;
+}
+
+.item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.item-section-desc {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 1rem;
+  overflow: hidden;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-price-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #008000;
+  font-weight: 600;
+}
+
+.delete-btn {
+  cursor: pointer;
+  color: #b91c1c;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}

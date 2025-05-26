@@ -1,13 +1,232 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+   box-sizing: border-box;
+}
+/* for shadow----> chrome pe-- box shadow mannu arora */
+
+.navbar {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 72rem;  
+  width: 100%;        
+  padding: 0 1rem;   
 }
+
+
+.nav_img_home{
+  width: 75px;
+  height: 75px;
+   margin-left: 1.25rem;
+   margin-right: 1.5rem;
+}
+.nav_img_cart{
+  width: 40px;
+  height: 40px;
+   margin-left: 1.25rem;
+   margin-right: 1.5rem;
+}
+.navbar_routes{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.home_route{
+  color: white;
+   font-size: 20px;
+   text-decoration: none;
+}
+.nav-cart-block{
+   position: relative;
+   color: white;
+}
+
+.navbar_routes a,
+.navbar_routes a:visited,
+.navbar_routes a:hover,
+.navbar_routes a:active {
+  color: white;
+  text-decoration: none;
+}
+.nav_cart_length{
+      position: absolute;
+  top: -2px;
+  right: -1px;
+  background-color: rgb(11, 209, 80);      
+  color: white;
+  font-size: 13px;               
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  animation: bounce 0.6s ease infinite;
+  
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+
+
+.home-nodata{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.home-mapping-div {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 72rem;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  column-gap: 1.25rem;
+  row-gap: 2.5rem;
+  min-height: 80vh;
+}
+
+@media (min-width: 640px) {
+  .home-mapping-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .home-mapping-div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-mapping-div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+
+
+.product-main-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   transition: transform 300ms ease-in;
+    box-shadow: none;
+    gap: 0.75rem;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  margin-left: 1.25rem;
+  border-radius: 0.75rem;
+  outline: 2px solid #6a6565;
+
+}
+.product-main-container:hover {
+  transform: scale(1.10); 
+  box-shadow: -10px -10px 30px 4px rgba(0,0,0,0.1), 10px 10px 30px 4px rgba(45,78,255,0.15);
+
+}
+
+.product-main-title {
+  width: 10rem;
+  overflow: hidden;
+}
+
+.product-main-title p {
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  overflow: hidden;
+}
+.product-desc{
+    width: 10rem;
+  color: #cbd5e0;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: left;
+}
+.product-img-div{
+   height: 180px;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.product-price-add-container{
+    display: flex;
+    width: 100%;
+    margin-top: 1.25rem;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+}
+.product-price-para{
+    color: #16a34a;
+  font-weight: 600;
+}
+
+.product-btn-remove{
+    color: #4a5568;
+  border: 2px solid #4a5568;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0.25rem 0.75rem;
+  text-transform: uppercase;
+    transition: background-color 300ms ease-in, color 300ms ease-in, transform 300ms ease-in;
+
+}
+.product-btn-add{
+    color: #4a5568;
+  border: 2px solid #4a5568;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0.25rem 0.75rem;
+  text-transform: uppercase;
+    transition: background-color 300ms ease-in, color 300ms ease-in, transform 300ms ease-in;
+
+}
+
+.product-btn-remove:hover {
+  background-color: #4a5568;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.product-btn-add:hover {
+  background-color: #4a5568;
+  color: #ffffff;
+  transform: scale(1.01);
+}
+
+
+
