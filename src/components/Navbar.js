@@ -12,7 +12,7 @@ const Navbar = () => {
 
                    <NavLink to="/">
                 <div>
-                     <img src='/home.jpeg' className='nav_img_home'/>
+                     <img src='/home.jpeg' alt='faltuuu' className='nav_img_home'/>
                 </div>
             </NavLink>
             <div className='navbar_routes'>
@@ -23,7 +23,7 @@ const Navbar = () => {
                 <NavLink to="/cart">
 
                     <div className='nav-cart-block'>
-                        <img src='/cart.jpg' className='nav_img_cart' /> 
+                        <img src='/cart.jpg' alt='faltuuuuu' className='nav_img_cart' /> 
                       {
                         cart.length>0 &&
                         <span className='nav_cart_length'>{cart.length}</span> 

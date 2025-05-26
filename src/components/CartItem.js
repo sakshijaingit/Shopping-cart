@@ -17,7 +17,7 @@ const CartItem = ({item , itemIndex}) => {
     <div>
         <div className='item-section'>
             <div className='item-img-div'>
-                <img src={item.image} className='item-img'/>
+                <img src={item.image} alt='faltuuuuuuuu' className='item-img'/>
             </div>
             <div className='item-section-desc'>
                 <h1 className='title'>{item.title}</h1>

@@ -29,7 +29,7 @@ const Product = ({post}) => {
             <p className='product-desc'>{post.description.split(" ").slice(0,10).join(" ") + "..."}</p>
         </div>
         <div className='product-img-div'>
-            <img src={post.image} className="product-img"/>
+            <img src={post.image} alt='faltuuuuuu' className="product-img"/>
         </div>
 
         <div className='product-price-add-container'>
@@ -38,7 +38,7 @@ const Product = ({post}) => {
              </div>
        
        {
-        Array.isArray(cart) && cart.some((p) => p.id ==post.id) ?
+        Array.isArray(cart) && cart.some((p) => p.id ===post.id) ?
         (<button onClick={removeFromCart} className='product-btn-remove'>Remove Item</button>) :
         (<button onClick={addTocart} className='product-btn-add'>Add to Cart</button>)
        }
